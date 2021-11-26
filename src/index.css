@@ -17,3 +17,7 @@ code {
   text-align:center;
   text-decoration:underline;
 }
+.barchart
+{
+  background-image: linear-gradient(rgb(51, 22, 22), rgb(99, 27, 27));
+}

@@ -1,5 +1,7 @@
 import './App.css';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, AreaChart, Area, BarChart, Bar } from 'recharts';
+ 
+
+import { LineChart, Pie, PieChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, AreaChart, Area, BarChart, Bar } from 'recharts';
 const pdata = [
   {
     name: 'Python',
@@ -27,20 +29,45 @@ const pdata = [
     fees: 4
   },
   {
-    name: 'C++',
-    student: 10,
-    fees: 8
+    name: 'R',
+    student: 15,
+    fees: 6
   },
+  {
+    name: 'js',
+    student: 12,
+    fees: 18
+  },
+  {
+    name: '.net',
+    student: 20,
+    fees: 18
+  },
+  {
+    name: 'data science',
+    student: 15,
+    fees: 2
+  },
+
+
+
 ];
 
 function App() {
+
   return (
+
+
+
     <>
       <h1 className="chart-heading">Line Chart</h1>
       <ResponsiveContainer width="100%" aspect={3}>
-        <LineChart data={pdata} width={500} height={300} margin={{ top: 5, right: 300, left: 20, bottom: 5 }}>
+        {/* // aspect is height */}
+        <LineChart data={pdata} width={500} height={300} style={{ backgroundColor: 'black' }} margin={{ top: 5, right: 300, left: 20, bottom: 5 }}>
           <CartesianGrid strokeDasharray="3 3" />
+
           <XAxis dataKey="name" interval={'preserveStartEnd'} tickFormatter={(value) => value + " Programming"} />
+          {/* interval={'preserveStartEnd'} more than 5 end point */}
           <YAxis />
           <Tooltip contentStyle={{ backgroundColor: 'yellow' }} />
           <Legend />
@@ -52,6 +79,7 @@ function App() {
       <h1 className="chart-heading">Area Chart</h1>
       <ResponsiveContainer width="100%" aspect={3}>
         <AreaChart
+          style={{ backgroundColor: '#050A30' }}
           width={500}
           height={300}
           data={pdata}
@@ -74,6 +102,7 @@ function App() {
       <h1 className="chart-heading">Bar Chart</h1>
       <ResponsiveContainer width="100%" aspect={3}>
         <BarChart
+          className="barchart"
           width={500}
           height={300}
           data={pdata}

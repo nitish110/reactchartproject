@@ -2,11 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import PdfViewer from './Pdf';
+import Bcrpt from './Bcrpt';
+import Mapping from './Mapping';
+import Graph from './Graph';
 import reportWebVitals from './reportWebVitals';
-
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    <PdfViewer/>
+    <Bcrpt/>
+    {/* <Mapping/> */}
+    {/* <Graph/> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
